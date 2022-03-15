@@ -7,6 +7,12 @@
     <link href="../css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="index.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css"/>
+        <script>
+        function send() {
+            window.parent.postMessage('Hello Parent Frame!', '*');
+            // document.getElementById('intro').window.parent.postMessage('Hello Parent Frame!', '*');
+        }
+    </script>
 </head>
 <body>
 <div class="visualizer">
@@ -47,7 +53,7 @@
                 <p>Successfully processed <span id="numberProcessed">a lot of</span> data points to generate your heatmap. Please submit your email address to start exploring...</p>
                 <div class="email-form">
                     <input id="email" type="email" placeholder="Email address" />
-                    <button id="launch">Launch heatmap</button>
+                    <button id="launch" onclick="send()">Launch heatmap</button>
                 </div>
                 <p>Usage tips: <i>Zoom</i> by scrolling, double-clicking, or using the buttons in the upper lefthand corner. <i>Navigate</i> by clicking and dragging. Hover over the menu in the lower lefthand corner to customize the heatmap rendering.</p>
                 <div class="disclaimer">By submitting your email address you agree to receive interesting communications from the Location History Visualizer team from time to time. If you're not interested, you can unsubscribe immediately.</div>
