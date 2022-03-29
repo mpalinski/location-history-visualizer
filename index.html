@@ -29,35 +29,35 @@
                 <p>
 
                   Zanim przystąpi Pan/i do licytacji prosimy o zapoznanie się z wizualnym przedstawieniem Państwa danych na interaktywnej mapie. Ciemniejsze obszary oznaczają miejsca, które odwiedzili Państwo częściej logując się do usług Google.</p>
-                <p>Przeciągnij i upuść na tej stronie plik <b>Records.json</b>. Znajdziesz go w folderze <b>Historia lokalizacji</b>, wśród plików, które otrzymałaś/eś od Google prosząc o przesłanie historii lokalizacji.
-                <p class="fallback">Możesz również przesłać plik wybierając go z dysku: <input name="file" type="file" id="file"></input></p>
+                <p>Przeciągnij i upuść na tej stronie plik <b>Records.json</b>. Można go znaleźć folderze <b>Historia lokalizacji</b>, wśród plików, które otrzymał Pan/i od Google prosząc o przesłanie historii lokalizacji.
+                <p class="fallback">Można również przesłać plik wybierając go z dysku: <input name="file" type="file" id="file"></input></p>
                 <p class="credit">Otwarty kod aplikacji: <a target="_blank" href="https://github.com/theopolisme/location-history-visualizer">Github</a> </p>
             </div>
 
             <!-- Shown in interim while processing is in progress -->
             <div id="working" class="content-box hidden">
-                <h2>Processing data...</h2>
+                <h2>Przetwarzanie danych...</h2>
                 <div class="loading">
                     <div class="bounce1"></div>
                     <div class="bounce2"></div>
                     <div class="bounce3"></div>
                 </div>
                 <p><span id="currentStatus">Waking up...</span></p>
-                <p>This may take a while... sit back, get a cup of tea or something.</p>
-                <p><i>Why does it take so long?</i> Depending on how long Google's been tracking your location, you may have hundreds of thousands of [latitude, longitude] pairs, every one of which must be loaded, analyzed, and plotted. That's a lot of dots.</p>
+                <!-- <p>This may take a while... sit back, get a cup of tea or something.</p> -->
+                <!-- <p><i>Why does it take so long?</i> Depending on how long Google's been tracking your location, you may have hundreds of thousands of [latitude, longitude] pairs, every one of which must be loaded, analyzed, and plotted. That's a lot of dots.</p> -->
             </div>
 
             <!-- Content displayed once processing complete -->
             <div id="done" class="content-box hidden">
-                <h2>Render complete!</h2>
-                <p>Successfully processed <span id="numberProcessed">a lot of</span> data points to generate your heatmap. Please submit your email address to start exploring...</p>
+                <h2>Gotowe!</h2>
+                <p>Mapa oparta jest na <b><span id="numberProcessed"></span></b> danych dotyczących Pana/i lokalizacji.</p>
                 <div class="email-form">
-                    <input id="email" type="email" placeholder="Email address" />
-                    <button id="launch" onclick="send()">Launch heatmap</button>
+                    <input id="email" type="email" placeholder="Email address" / style="display: none">
+                    <button id="launch" onclick="send()">Włącz mapę</button>
                 </div>
-                <p>Usage tips: <i>Zoom</i> by scrolling, double-clicking, or using the buttons in the upper lefthand corner. <i>Navigate</i> by clicking and dragging. Hover over the menu in the lower lefthand corner to customize the heatmap rendering.</p>
-                <div class="disclaimer">By submitting your email address you agree to receive interesting communications from the Location History Visualizer team from time to time. If you're not interested, you can unsubscribe immediately.</div>
-                <p class="credit">An <a target="_blank" href="https://github.com/theopolisme/location-history-visualizer">open source</a> project by the makers of <a href="/">Location History Visualizer Pro</a>.</p>
+                <p>Domyślnie mapa pokazuje Państwa aktywność na obszarze Polski. Można to zmienić przybliżając/oddalając widok lub przesuwając mapę. Wskazówki odnośnie nawigacji: <i>Przybliż</i> przewijając myszką, klikając dwa razy lub używając przycisków +/- w lewym górnym rogu. <i>Przesuwaj mapę</i> klikając i przeciągając.</p>
+                <p class="credit">Otwarty kod aplikacji: <a target="_blank" href="https://github.com/theopolisme/location-history-visualizer">Github</a> </p>
+
             </div>
         </div>
     </div>
@@ -66,7 +66,7 @@
     <div id="controls">
         <div class="title">
             Location History Visualizer
-            <span>(hover for additional controls)</span>
+            <span>(najedź kursorem, żeby wyświetlić więcej opcji)<span>
         </div>
         <div class="control-block">
             <label for="radius">Point radius</label>

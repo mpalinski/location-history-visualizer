@@ -17,7 +17,7 @@
 		var dropzone;
 
 		// Initialize the map
-		map = L.map( 'map' ).setView( [0,0], 2 );
+		map = L.map( 'map' ).setView( [52.23033174889124, 21.049513277284607], 6 );
 		L.tileLayer( 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 			attribution: 'location-history-visualizer is open source and available <a href="https://github.com/theopolisme/location-history-visualizer">on GitHub</a>. Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors.',
 			maxZoom: 18,
@@ -217,7 +217,7 @@
 	}
 
 	/*
-        Default behavior for file upload (no chunking)	
+        Default behavior for file upload (no chunking)
 	*/
 
 	function parseKMLFile( file ) {
